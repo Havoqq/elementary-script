@@ -6,7 +6,7 @@ GUI=$(zenity --list --checklist \
 	--height 400 \
 	--width 800 \
 	--title="elementary-script" \
-	--text "Pick one or multiple Actions to execute." \
+	--text "Pick one or multiple actions to execute." \
 	--column=Picks \
 	--column=Actions \
 	--column=Description \
@@ -23,16 +23,16 @@ GUI=$(zenity --list --checklist \
 	TRUE "Install Firefox" "Installs Firefox. A free and open-source web browser." \
 	FALSE "Install Liferea" "Installs Liferea. a web feed reader/news aggregator that brings together all of the content from your favorite subscriptions into a simple interface that makes it easy to organize and browse feeds. Its GUI is similar to a desktop mail/newsclient, with an embedded graphical browser." \
 	TRUE "Install VLC" "Installs VLC. A free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVDs, Audio CDs, VCDs, and various streaming protocols." \
-	TRUE "Install Transmission" "Installs the Transmission BitTorrent client." \
-	TRUE "Install Atom" "Installs Atom. A hackable text editor for the 21st Century." \
+	FALSE "Install Transmission" "Installs the Transmission BitTorrent client." \
+	FALSE "Install Atom" "Installs Atom. A hackable text editor for the 21st Century." \
 	FALSE "Install Sublime Text 3" "Installs Sublime Text 3. A sophisticated text editor for code, markup and prose." \
 	TRUE "Install LibreOffice" "Installs LibreOffice. A powerful office suite." \
 	TRUE "Install Numix Circle icon theme" "Add action description later..." \
 	TRUE "Install Elementary tweaks" "Add action description later..." \
-	TRUE "Install additional plank themes" "Add action description later..." \
+	FALSE "Install additional plank themes" "Add action description later..." \
 	TRUE "Install Indicator USB" "Add action description later..." \
 	TRUE "Install Indicator Multiload" "Add action description later..." \
-	TRUE "Install Y PPA Manager" "Add action description later..." \
+	FALSE "Install Y PPA Manager" "Add action description later..." \
 	TRUE "Install f.lux" "Add action description later..." \
 	TRUE "Install Gnome system monitor" "Add action description later..." \
 	TRUE "Install Caffeine" "Add action description later..." \
