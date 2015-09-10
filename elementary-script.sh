@@ -12,14 +12,14 @@ GUI=$(zenity --list --checklist \
 	--column=Description \
 	TRUE "Update System" "Updates the package lists, the system packages and Applications."  \
 	TRUE "Speed-Up Memory" "Installs preload and enables zRAM." \
-	TRUE "Install Ubuntu Restricted Extras" "Installs commonly used applications with restricted copyright (mp3, avi, mpeg, TrueType, Java, Flash, Codecs)." \
+	TRUE "Install Ubuntu Restricted Extras" "Installs commonly used applications with restricted copyright." \
 	TRUE "Install Extra Multimedia Codecs" "Installs extra multimedia codecs." \
 	TRUE "Install Support for Encrypted DVD's" "Installs support for playing encrypted DVD's." \
 	TRUE "Install Support for Archive Formats" "Installs support for archive formats." \
 	TRUE "Install Google Chrome" "Installs Google Chrome." \
 	TRUE "Install Firefox" "Installs Firefox. A free and open-source web browser." \
 	TRUE "Install Arc Theme" "The theme." \
-	TRUE "Install VLC" "Installs VLC. A free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVDs, Audio CDs, VCDs, and various streaming protocols." \
+	TRUE "Install VLC" "Installs VLC." \
 	TRUE "Install LibreOffice" "Installs LibreOffice. A powerful office suite." \
 	TRUE "Install Numix Circle icon theme" "Add action description later..." \
 	TRUE "Install Super Flat Remix icon theme" "Add action description later..." \
