@@ -42,6 +42,7 @@ GUI=$(zenity --list --checklist \
 	TRUE "Install Skype" "Add action description later..." \
 	TRUE "Install Steam" "Add action description later..." \
 	TRUE "Install Infinality" "Add action description later..." \
+	TRUE "Fix Avahi error" "Avahi .local fix" \
 	FALSE "Install Transmission" "Installs the Transmission BitTorrent client." \
 	FALSE "Install Y PPA Manager" "Add action description later..." \
 	FALSE "Install f.lux" "Add action description later..." \
@@ -403,6 +404,14 @@ then
 	sudo bash /etc/fonts/infinality/infctl.sh setstyle
 	2
 	sudo perl -pi -e 's/USE_STYLE="DEFAULT"/USE_STYLE="INFINALITY"/g' /etc/profile.d/infinality-settings.sh
+fi
+
+if [[ $GUI == *"Fix Avahi error"* ]]
+then
+	clear
+	echo "Fixing Avahi error..."
+	echo ""
+	sudo perl -pi -e 's/AVAHI_DAEMON_DETECT_LOCAL=1/AVAHI_DAEMON_DETECT_LOCAL=0/g' /etc/default/avahi-daemon
 fi
 
 # Install Transmission Action
