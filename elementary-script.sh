@@ -10,7 +10,7 @@ GUI=$(zenity --list --checklist \
 	--column=Picks \
 	--column=Actions \
 	--column=Description \
-	TRUE "Update System" "Updates the package lists, the system packages and Applications."  \
+	TRUE "Update System" "Updates the package lists, the system packages and applications."  \
 	TRUE "Speed-Up Memory" "Installs preload and enables zRAM." \
 	TRUE "Install Ubuntu Restricted Extras" "Installs commonly used applications with restricted copyright." \
 	TRUE "Install Extra Multimedia Codecs" "Installs extra multimedia codecs." \
@@ -231,7 +231,7 @@ then
 	clear
 	echo "Installing Elementary tweaks..."
 	echo ""
-	curl -sL  http://i-hate-farms.github.io/spores/install | sudo bash - 
+	curl -sL  http://i-hate-farms.github.io/spores/install | sudo bash -
 	sudo apt-get -y install elementary-tweaks
 fi
 
@@ -274,7 +274,7 @@ then
 	clear
 	echo "Installing Gnome disk utility..."
 	echo ""
-	sudo apt-get -y install gnome-disk-utility 
+	sudo apt-get -y install gnome-disk-utility
 fi
 
 # Install Configurator
@@ -458,7 +458,7 @@ then
 	clear
 	echo "Installing Y PPA Manager..."
 	echo ""
-	sudo add-apt-repository -y ppa:webupd8team/y-ppa-manager 
+	sudo add-apt-repository -y ppa:webupd8team/y-ppa-manager
 	sudo apt-get -y update
 	sudo apt-get -y install y-ppa-manager
 fi
