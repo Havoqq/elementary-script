@@ -3,7 +3,7 @@ clear
 
 # Zenity
 GUI=$(zenity --list --checklist \
-	--height 400 \
+	--height 600 \
 	--width 800 \
 	--title="elementary-script" \
 	--text "Pick one or multiple actions to execute." \
