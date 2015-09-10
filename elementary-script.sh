@@ -26,6 +26,7 @@ GUI=$(zenity --list --checklist \
 	TRUE "Install Elementary Plus icons" "Add action description later..." \
 	TRUE "Install Elementary Enhanced icons" "Add action description later..." \
 	TRUE "Install Elementary tweaks" "Add action description later..." \
+	TRUE "Install Atom" "Installs Atom. A hackable text editor for the 21st Century." \
 	TRUE "Install Indicator USB" "Add action description later..." \
 	TRUE "Install Go For It" "Add action description later..." \
 	TRUE "Install Gnome disk utility" "Add action description later..." \
@@ -232,6 +233,17 @@ then
 	echo ""
 	curl -sL  http://i-hate-farms.github.io/spores/install | sudo bash - 
 	sudo apt-get -y install elementary-tweaks
+fi
+
+# Install Atom Action
+if [[ $GUI == *"Install Atom"* ]]
+then
+	clear
+	echo "Installing Atom..."
+	echo ""
+	sudo add-apt-repository -y ppa:webupd8team/atom
+	sudo apt-get -y update
+	sudo apt-get -y install atom
 fi
 
 # Install Indicator USB
