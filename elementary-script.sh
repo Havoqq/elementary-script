@@ -3,7 +3,7 @@ clear
 
 # Zenity
 GUI=$(zenity --list --checklist \
-	--height 600 \
+	--height 400 \
 	--width 800 \
 	--title="elementary-script" \
 	--text "Pick one or multiple actions to execute." \
@@ -27,7 +27,7 @@ GUI=$(zenity --list --checklist \
 	TRUE "Install Elementary Enhanced icons" "Add action description later..." \
 	TRUE "Install Elementary tweaks" "Add action description later..." \
 	TRUE "Install Indicator USB" "Add action description later..." \
-	TRUE "Install Go For It" "Add action description later..." \	
+	TRUE "Install Go For It" "Add action description later..." \
 	TRUE "Install Gnome disk utility" "Add action description later..." \
 	TRUE "Install Configurator" "Add action description later..." \
 	TRUE "Install eradio" "Add action description later..." \
