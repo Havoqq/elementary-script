@@ -41,7 +41,7 @@ GUI=$(zenity --list --checklist \
 	TRUE "Install Vocal" "Add action description later..." \
 	TRUE "Install Skype" "Add action description later..." \
 	TRUE "Install Steam" "Add action description later..." \
-	TRUE "Install Infinality" "Add action description later..." \	
+	TRUE "Install Infinality" "Add action description later..." \
 	FALSE "Install Transmission" "Installs the Transmission BitTorrent client." \
 	FALSE "Install Y PPA Manager" "Add action description later..." \
 	FALSE "Install f.lux" "Add action description later..." \
