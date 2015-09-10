@@ -406,12 +406,26 @@ then
 	sudo perl -pi -e 's/USE_STYLE="DEFAULT"/USE_STYLE="INFINALITY"/g' /etc/profile.d/infinality-settings.sh
 fi
 
+#Fix Avahi shit
 if [[ $GUI == *"Fix Avahi error"* ]]
 then
 	clear
 	echo "Fixing Avahi error..."
 	echo ""
 	sudo perl -pi -e 's/AVAHI_DAEMON_DETECT_LOCAL=1/AVAHI_DAEMON_DETECT_LOCAL=0/g' /etc/default/avahi-daemon
+fi
+
+#Optimize for SSD
+if [[ $GUI == *"Optimize for SSD"* ]]
+then
+	clear
+	echo "Fixing Avahi error..."
+	echo ""
+	sudo perl -pi -w -e 's{exit 0}{fstrim /\nfstrim /home\nexit 0}g;' /etc/rc.local
+	sudo mv -v /etc/cron.weekly/fstrim /fstrim
+	sudo echo "vm.swappiness=1" >> /etc/sysctl.conf
+	sudo perl -pi -e 's/errors/noatime,errors/g' /etc/fstab
+	sudo perl -pi -e 's/defaults/noatime,defaults/g' /etc/fstab
 fi
 
 # Install Transmission Action
