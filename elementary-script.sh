@@ -43,6 +43,7 @@ GUI=$(zenity --list --checklist \
 	TRUE "Install Steam" "Add action description later..." \
 	TRUE "Install Infinality" "Add action description later..." \
 	TRUE "Fix Avahi error" "Avahi .local fix" \
+	TRUE "Optimize for SSD" "Reduce SSD wear" \
 	FALSE "Install Transmission" "Installs the Transmission BitTorrent client." \
 	FALSE "Install Y PPA Manager" "Add action description later..." \
 	FALSE "Install f.lux" "Add action description later..." \
@@ -512,7 +513,7 @@ then
 	echo "Download my icon theme"
 	echo "Set theme, icons"
 	echo "Theme Skype (QT4), elementary+"
-	echo "SSD: rc.local, remove cron job, swappiness, hibernation -> suspend"
+	echo "hibernation -> suspend"
 	read -p "Press any key..."
 fi
 
