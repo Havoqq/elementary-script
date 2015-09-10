@@ -147,7 +147,7 @@ then
 	clear
 	echo "Installing Arc Theme..."
 	echo ""
-	sudo apt-get install -y autoconf automake libgtk-3-dev git
+	sudo apt-get install -y autoconf automake libgtk-3-dev git gnome-themes-standard gtk2-engines-murrine
 	sudo rm -rf /usr/share/themes/{Arc,Arc-Darker,Arc-Dark}
 	rm -rf ~/.local/share/themes/{Arc,Arc-Darker,Arc-Dark}
 	rm -rf ~/.themes/{Arc,Arc-Darker,Arc-Dark}
