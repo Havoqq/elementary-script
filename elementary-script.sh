@@ -175,7 +175,7 @@ then
 	echo ""
 	sudo add-apt-repository -y ppa:libreoffice/ppa
 	sudo apt-get -y update
-	sudo apt-get -y install libreoffice libreoffice-gtk libreoffice-style-sifr
+	sudo apt-get -y install libreoffice libreoffice-gtk libreoffice-style-sifr myspell-de-de
 fi
 
 # Install Numix Circle icon theme
