@@ -65,6 +65,29 @@ then
 	sudo apt-get -y dist-upgrade
 fi
 
+# Install Infinality
+if [[ $GUI == *"Install Infinality"* ]]
+then
+	clear
+	echo "Installing Infinality..."
+	echo ""
+	sudo add-apt-repository -y ppa:no1wantdthisname/ppa
+	sudo apt-get -y update
+	sudo apt-get -y upgrade
+	sudo apt-get -y install fontconfig-infinality
+	sudo bash /etc/fonts/infinality/infctl.sh setstyle
+	sudo perl -pi -e 's/USE_STYLE="DEFAULT"/USE_STYLE="UBUNTU"/g' /etc/profile.d/infinality-settings.sh
+fi
+
+# Install Steam
+if [[ $GUI == *"Install Steam"* ]]
+then
+	clear
+	echo "Installing Steam - input will be required"
+	echo ""
+	sudo apt-get -y install steam
+fi
+
 # Speed-Up Memory Action
 if [[ $GUI == *"Speed-Up Memory"* ]]
 then
@@ -393,30 +416,6 @@ then
 	echo ""
 	sudo apt-get -y install skype
 	sudo apt-get install qt4-qtconfig
-fi
-
-# Install Steam
-if [[ $GUI == *"Install Steam"* ]]
-then
-	clear
-	echo "Installing Steam - input will be required"
-	echo ""
-	sudo apt-get -y install steam
-fi
-
-# Install Skype
-if [[ $GUI == *"Install Infinality"* ]]
-then
-	clear
-	echo "Installing Infinality..."
-	echo ""
-	sudo add-apt-repository -y ppa:no1wantdthisname/ppa
-	sudo apt-get -y update
-	sudo apt-get -y upgrade
-	sudo apt-get -y install fontconfig-infinality
-	sudo bash /etc/fonts/infinality/infctl.sh setstyle
-	echo "3"
-	sudo perl -pi -e 's/USE_STYLE="DEFAULT"/USE_STYLE="UBUNTU"/g' /etc/profile.d/infinality-settings.sh
 fi
 
 #Fix Avahi shit
