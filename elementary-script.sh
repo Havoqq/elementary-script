@@ -94,7 +94,6 @@ then
 	clear
 	echo "Speeding-up Memory..."
 	echo ""
-	sudo apt-get -y install preload
 	sudo apt-get -y install zram-config
 fi
 
