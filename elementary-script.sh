@@ -435,8 +435,12 @@ then
 	sudo perl -pi -w -e 's{exit 0}{fstrim /\nfstrim /home\nexit 0}g;' /etc/rc.local
 	sudo mv -v /etc/cron.weekly/fstrim /fstrim
 	sudo echo "vm.swappiness=1" >> /etc/sysctl.conf
-	sudo perl -pi -e 's/errors/noatime,errors/g' /etc/fstab
-	sudo perl -pi -e 's/defaults/noatime,defaults/g' /etc/fstab
+	sudo perl -pi -e 's/errors/noatime,nodiratime,errors/g' /etc/fstab
+	sudo perl -pi -e 's/defaults/noatime,nodiratime,defaults/g' /etc/fstab
+	sudo perl -pi -e 's/<allow_active>yes</allow_active>/<allow_active>no</allow_active>/g' /usr/share/polkit-1/actions/org.freedesktop.upower.policy
+	sudo echo "tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0" >> /etc/fstab
+	sudo echo "vm.dirty_background_ratio=5" >> /etc/sysctl.conf
+	sudo echo "vm.dirty_ratio=60" >> /etc/sysctl.conf
 fi
 
 # Install Transmission Action
