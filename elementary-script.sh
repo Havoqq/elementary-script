@@ -415,8 +415,8 @@ then
 	sudo apt-get -y upgrade
 	sudo apt-get -y install fontconfig-infinality
 	sudo bash /etc/fonts/infinality/infctl.sh setstyle
-	2
-	sudo perl -pi -e 's/USE_STYLE="DEFAULT"/USE_STYLE="INFINALITY"/g' /etc/profile.d/infinality-settings.sh
+	echo "3"
+	sudo perl -pi -e 's/USE_STYLE="DEFAULT"/USE_STYLE="UBUNTU"/g' /etc/profile.d/infinality-settings.sh
 fi
 
 #Fix Avahi shit
