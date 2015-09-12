@@ -173,7 +173,7 @@ then
 	echo "Installing Arc Theme..."
 	echo ""
 	sudo apt-get install -y autoconf automake libgtk-3-dev git gnome-themes-standard gtk2-engines-murrine
-  sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_15.04/ /' >> /etc/apt/sources.list.d/arc-theme.list"
+	sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_15.04/ /' >> /etc/apt/sources.list.d/arc-theme.list"
 	wget http://download.opensuse.org/repositories/home:Horst3180/xUbuntu_15.04/Release.key
 	sudo apt-key add - < Release.key
 	rm Release.key
