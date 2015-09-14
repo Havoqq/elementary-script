@@ -516,7 +516,7 @@ then
 	echo ""
 	sudo apt-get -y update
 	sudo apt-get -y dist-upgrade
-	sudo apt-get -y install ppa-purge gparted
+	sudo apt-get -y install ppa-purge gparted deja-dup
 fi
 
 # Stuff to do
