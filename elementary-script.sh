@@ -50,8 +50,8 @@ GUI=$(zenity --list --checklist \
 	FALSE "Install f.lux" "Add action description later..." \
 	FALSE "Install Gnome system monitor" "Add action description later..." \
 	TRUE "Fix Broken Packages" "Fixes the broken packages." \
-	TRUE "Clean-Up Junk" "Removes unnecessary packages and the local repository of retrieved package files." \
 	TRUE "Post-install system update" "Update the package list, the system packages and Applications." \
+	TRUE "Clean-Up Junk" "Removes unnecessary packages and the local repository of retrieved package files." \
 	TRUE "Stuff to do" "What else?" \
 	--separator=', ');
 
@@ -113,6 +113,10 @@ then
 	echo "Installing Extra Multimedia Codecs..."
 	echo ""
 	sudo apt-get -y install libavcodec-extra-54
+	sudo apt-add-repository -y ppa:mc3man/trusty-media
+	sudo apt-get -y update
+	sudo apt-get -y dist-upgrade
+	sudo apt-get -y install ffmpeg faac faad gstreamer0.10-ffmpeg x264 x265
 fi
 
 # Install Support for Encrypted DVD's Action
@@ -498,16 +502,6 @@ then
 	sudo apt-get -y -f install
 fi
 
-# Clean-Up Junk Action
-if [[ $GUI == *"Clean-Up Junk"* ]]
-then
-	clear
-	echo "Cleaning-up junk..."
-	echo ""
-	sudo apt-get -y autoremove
-	sudo apt-get -y autoclean
-fi
-
 # Post-install system update
 if [[ $GUI == *"Post-install system update"* ]]
 then
@@ -517,6 +511,16 @@ then
 	sudo apt-get -y update
 	sudo apt-get -y dist-upgrade
 	sudo apt-get -y install ppa-purge gparted deja-dup
+fi
+
+# Clean-Up Junk Action
+if [[ $GUI == *"Clean-Up Junk"* ]]
+then
+	clear
+	echo "Cleaning-up junk..."
+	echo ""
+	sudo apt-get -y autoremove
+	sudo apt-get -y autoclean
 fi
 
 # Stuff to do
@@ -529,6 +533,7 @@ then
 	echo "Set theme, icons"
 	echo "Theme Skype (QT4), elementary+"
 	echo "hibernation -> suspend"
+	echo ".bashrc: In PS1 \u@\h:\w ersetzen durch \W"
 	read -p "Press any key..."
 fi
 
